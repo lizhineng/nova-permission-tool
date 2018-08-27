@@ -1,0 +1,32 @@
+{
+    "name": "lizhineng/permission-tool",
+    "description": "A Laravel Nova tool based on Spatie permission package.",
+    "keywords": [
+        "laravel",
+        "nova",
+        "permission",
+        "tool"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0",
+        "spatie/laravel-permission": "^2.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lizhineng\\PermissionTool\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lizhineng\\PermissionTool\\ToolServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
