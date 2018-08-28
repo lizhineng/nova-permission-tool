@@ -40,9 +40,23 @@ public function tools()
 }
 ```
 
+You can publish the lang files and config file with:
+
+```
+php artisan vendor:publish --provider="Lizhineng\PermissionTool\ToolServiceProvider"
+```
+
+When published, the config file is located at `/config/permission-tool.php`, and the lang files are localed at `/resource/lang/vendor/permission-tool`.
+
 ## Usage
 
 Click on the "Access Control" menu item in your Nova app to see the tool provided by this package.
+
+### Config
+
+Currently there is only one option can be edited in this package.
+
+When you checkout the role/permission resource detail page, it will show you the users who has the role/permission below. The `models.user` option is to tell us which Eloquent model should be used to retrieve your users, and it must be a Laravel Nova resource model.
 
 ### Localization
 
@@ -50,6 +64,8 @@ The package is supported the following languages:
 
 * English
 * Simplified Chinese
+
+When you publish the package lang files, you can make your own translation in `/resource/vendor/permission-tool/{locale}`.
 
 ### Changelog
 
