@@ -13,6 +13,10 @@ This is a Laravel Nova tool based on [Spatie permission package](https://github.
 + List users by roles & permissions
 + CRUD roles & permissions
 
+#### Built-in filters
+
++ Guard Name Filter
+
 ![screenshot of the permission tool](https://raw.githubusercontent.com/lizhineng/nova-permission-tool/master/docs/screenshot.png)
 
 ## Installation
