@@ -2,7 +2,6 @@
 
 namespace Lizhineng\PermissionTool;
 
-use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;
 
 class PermissionTool extends Tool
@@ -14,13 +13,7 @@ class PermissionTool extends Tool
      */
     public function boot()
     {
-        Nova::resources([
-            Role::class,
-            Permission::class,
-        ]);
-
-        Nova::script('permission-tool', __DIR__.'/../dist/js/tool.js');
-        Nova::style('permission-tool', __DIR__.'/../dist/css/tool.css');
+        //
     }
 
     /**

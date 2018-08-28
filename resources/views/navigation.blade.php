@@ -11,7 +11,7 @@
                 resourceName: 'roles'
             }
         }" class="text-white ml-8 no-underline dim">
-            Roles
+            {{ __('Roles') }}
         </router-link>
     </li>
     <li class="leading-wide mb-4 text-sm">
@@ -21,7 +21,7 @@
                 resourceName: 'permissions'
             }
         }" class="text-white ml-8 no-underline dim">
-            Permissions
+            {{ __('Permissions') }}
         </router-link>
     </li>
 </ul>

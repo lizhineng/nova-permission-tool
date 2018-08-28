@@ -140,6 +140,6 @@ class Role extends Resource
      */
     public static function singularLabel()
     {
-        return __('Role');
+        return __('permission-tool::resource.Role');
     }
 }

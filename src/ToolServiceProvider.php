@@ -3,10 +3,7 @@
 namespace Lizhineng\PermissionTool;
 
 use Laravel\Nova\Nova;
-use Laravel\Nova\Events\ServingNova;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Lizhineng\PermissionTool\Http\Middleware\Authorize;
 
 class ToolServiceProvider extends ServiceProvider
 {
@@ -17,31 +14,40 @@ class ToolServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'permission-tool');
+        if ($this->app->runningInConsole()) {
+            $this->registerPublishing();
+        }
 
-        $this->app->booted(function () {
-            $this->routes();
-        });
+        $this->registerResources();
 
-        Nova::serving(function (ServingNova $event) {
-            //
-        });
+        Nova::resources([
+            Role::class,
+            Permission::class,
+        ]);
     }
 
     /**
-     * Register the tool's routes.
+     * Register the package's publishable resource.
      *
      * @return void
      */
-    protected function routes()
+    protected function registerPublishing()
     {
-        if ($this->app->routesAreCached()) {
-            return;
-        }
+        $this->publishes([
+            __DIR__.'/../resources/lang' => resource_path('lang/vendor/permission-tool'),
+        ], 'permission-tool-lang');
+    }
 
-        Route::middleware(['nova', Authorize::class])
-                ->prefix('nova-vendor/permission-tool')
-                ->group(__DIR__.'/../routes/api.php');
+    /**
+     * Register the package resources such as routes, templates, etc.
+     *
+     * @return void
+     */
+    protected function registerResources()
+    {
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'permission-tool');
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'permission-tool');
+        $this->loadJsonTranslationsFrom(resource_path('lang/vendor/permission-tool'));
     }
 
     /**
