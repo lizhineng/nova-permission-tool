@@ -74,8 +74,9 @@ class Role extends Resource
             BelongsToMany::make('Permission', 'permissions', Permission::class)
                 ->searchable(),
 
-            MorphToMany::make('User', 'users', User::class)
-                ->searchable(),
+            MorphToMany::make(
+                'User', 'users', config('permission-tool.models.user')
+            )->searchable(),
         ];
     }
 

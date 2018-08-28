@@ -34,6 +34,10 @@ class ToolServiceProvider extends ServiceProvider
     protected function registerPublishing()
     {
         $this->publishes([
+            __DIR__.'/../config/permission-tool.php' => config_path('permission-tool.php'),
+        ], 'permission-tool-config');
+
+        $this->publishes([
             __DIR__.'/../resources/lang' => resource_path('lang/vendor/permission-tool'),
         ], 'permission-tool-lang');
     }

@@ -2,7 +2,6 @@
 
 namespace Lizhineng\PermissionTool;
 
-use App\Nova\User;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\DateTime;
@@ -73,8 +72,9 @@ class Permission extends Resource
 
             BelongsToMany::make('Role', 'roles', Role::class),
 
-            MorphToMany::make('User', 'users', User::class)
-                ->searchable(),
+            MorphToMany::make(
+                'User', 'users', config('permission-tool.models.user')
+            )->searchable(),
         ];
     }
 
