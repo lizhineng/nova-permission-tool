@@ -1,7 +1,6 @@
 # Laravel Nova Permission Tool
 
-
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/lizhineng/nova-permission-tool.svg?style=flat-square)](https://packagist.org/packages/spatie/nova-backup-tool)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/lizhineng/nova-permission-tool.svg?style=flat-square)](https://packagist.org/packages/lizhineng/nova-permission-tool)
 [![Total Downloads](https://img.shields.io/packagist/dt/lizhineng/nova-permission-tool.svg?style=flat-square)](https://packagist.org/packages/lizhineng/nova-permission-tool)
 ![StyleCI](https://github.styleci.io/repos/146273887/shield?branch=master)
 ![MIT license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)
