@@ -2,14 +2,14 @@
 
 namespace Lizhineng\PermissionTool;
 
-use Illuminate\Http\Request;
-use Laravel\Nova\Fields\BelongsToMany;
-use Laravel\Nova\Fields\DateTime;
-use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\MorphToMany;
-use Laravel\Nova\Fields\Select;
-use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Resource;
+use Laravel\Nova\Fields\ID;
+use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\MorphToMany;
+use Laravel\Nova\Fields\BelongsToMany;
 
 class Permission extends Resource
 {
@@ -33,7 +33,7 @@ class Permission extends Resource
      * @var array
      */
     public static $search = [
-        'name'
+        'name',
     ];
 
     /**
