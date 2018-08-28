@@ -1,5 +1,5 @@
 {
-    "name": "lizhineng/permission-tool",
+    "name": "lizhineng/nova-permission-tool",
     "description": "A Laravel Nova tool based on Spatie permission package.",
     "keywords": [
         "laravel",
