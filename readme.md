@@ -1,9 +1,10 @@
 # Laravel Nova Permission Tool
 
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/lizhineng/nova-permission-tool.svg?style=flat-square)](https://packagist.org/packages/spatie/nova-backup-tool)
+[![Total Downloads](https://img.shields.io/packagist/dt/lizhineng/nova-permission-tool.svg?style=flat-square)](https://packagist.org/packages/lizhineng/nova-permission-tool)
 ![StyleCI](https://github.styleci.io/repos/146273887/shield?branch=master)
-[![Packagist](https://img.shields.io/packagist/dt/lizhineng/nova-permission-tool.svg?style=flat-square)](https://packagist.org/packages/lizhineng/nova-permission-tool)
-![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)
+![MIT license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)
 
 This is a Laravel Nova tool based on [Spatie permission package](https://github.com/spatie/laravel-permission) which lets you:
 
@@ -42,6 +43,13 @@ public function tools()
 ## Usage
 
 Click on the "Access Control" menu item in your Nova app to see the tool provided by this package.
+
+### Localization
+
+The package is supported the following languages:
+
+* English
+* Simplified Chinese
 
 ### Changelog
 
