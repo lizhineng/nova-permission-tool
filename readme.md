@@ -1,5 +1,8 @@
 # Laravel Nova Permission Tool
 
+![StyleCI](https://github.styleci.io/repos/146273887/shield?branch=master)
+![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)
+
 This is a Laravel Nova tool based on [Spatie permission package](https://github.com/spatie/laravel-permission) which lets you:
 
 + List all roles and permissions
