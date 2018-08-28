@@ -60,15 +60,15 @@ class Permission extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make(__('Name'), 'name'),
+            Text::make(__('permission-tool::fields.name'), 'name'),
 
-            Select::make(__('Guard Name'), 'guard_name')
+            Select::make(__('permission-tool::fields.guard_name'), 'guard_name')
                 ->options($guardOptions),
 
-            DateTime::make(__('Created At'), 'created_at')
+            DateTime::make(__('permission-tool::fields.created_at'), 'created_at')
                 ->onlyOnDetail(),
 
-            DateTime::make(__('Updated At'), 'updated_at')
+            DateTime::make(__('permission-tool::fields.updated_at'), 'updated_at')
                 ->onlyOnDetail(),
 
             BelongsToMany::make('Role', 'roles', Role::class),
@@ -129,7 +129,7 @@ class Permission extends Resource
      */
     public static function label()
     {
-        return __('Permissions');
+        return __('permission-tool::resources.permissions');
     }
 
     /**
@@ -139,6 +139,6 @@ class Permission extends Resource
      */
     public static function singularLabel()
     {
-        return __('Permission');
+        return __('permission-tool::resources.permission');
     }
 }
