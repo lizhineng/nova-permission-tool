@@ -1,6 +1,8 @@
 # Laravel Nova Permission Tool
 
+
 ![StyleCI](https://github.styleci.io/repos/146273887/shield?branch=master)
+[![Packagist](https://img.shields.io/packagist/dt/lizhineng/nova-permission-tool.svg?style=flat-square)](https://packagist.org/packages/lizhineng/nova-permission-tool)
 ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)
 
 This is a Laravel Nova tool based on [Spatie permission package](https://github.com/spatie/laravel-permission) which lets you:
