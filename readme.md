@@ -1,8 +1,14 @@
 # Laravel Nova Permission Tool
 
-This is a Laravel Nova tool based on [Spatie permission package](https://github.com/spatie/laravel-permission).
+This is a Laravel Nova tool based on [Spatie permission package](https://github.com/spatie/laravel-permission) which lets you:
 
-![screenshot of the backup tool](https://lizhineng.github.io/nova-permission-tool/docs/screenshot.png)
++ List all roles and permissions
++ List permissions by role
++ List roles by permissions
++ List users by roles & permissions
++ CRUD roles & permissions
+
+![screenshot of the permission tool](https://raw.githubusercontent.com/lizhineng/nova-permission-tool/master/docs/screenshot.png)
 
 ## Installation
 
