@@ -57,6 +57,27 @@ Currently there is only one option can be edited in this package.
 
 When you checkout the role/permission resource detail page, it will show you the users who has the role/permission below. The `models.user` option is to tell us which Eloquent model should be used to retrieve your users, and it must be a Laravel Nova resource model.
 
+### Attach to users detail page
+
+Thanks to Nova, that's pretty easy to attach roles fields or permissions fields to users detail page.
+
+```php
+// in app/Nova/User.php
+
+// ...
+
+public function fields()
+{
+    return [
+        // ...
+
+        MorphToMany::make('Roles', 'roles', \Lizhineng\PermissionTool\Role::class),
+
+        MorphToMany::make('Permissions', 'permissions', \Lizhineng\PermissionTool\Permission::class),
+    ];
+}
+```
+
 ### Localization
 
 The package is supported the following languages:
