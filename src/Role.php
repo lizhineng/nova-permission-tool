@@ -2,7 +2,6 @@
 
 namespace Lizhineng\PermissionTool;
 
-use App\Nova\User;
 use Laravel\Nova\Resource;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
